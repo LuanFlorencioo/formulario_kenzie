@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmulario | Atividade - Kenzie Academy</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <main>
+        <section class="info">
+            <img src="./src/img/light.png" alt="Kenzie logo" width="200">
+            <p>
+                Bem vindo(a) ao processo de cadastramento para o evento de tecnologia na <strong>Kenzie</strong>
+            </p>
+            <p>
+                Ficamos felizes de termos você por aqui, isso mostra que você está interessado a dar um <strong>upgrade</strong> na carreira de tecnologia
+            </p>
+            <p>
+                Falta pouco, apenas faça o cadastro ao lado com suas informações para que nós possamos lhe avisar deste <strong>evento incrível</strong>.
+            </p>
+        </section>
+
+        <section class="registration">
+            <h2>O evento que trará um upgrade para sua carreira Dev</h2>
+            <h3>Início: 13 de Maio de 2023</h3>
+
+            <p>
+                Bem-vindo(a) ao processo de cadastramento para o evento de tecnologia na <span>Kenzie.</span> Para que você consiga ter acesso a este evento é preciso se registrar logo abaixo colocando suas informações.
+            </p>
+            <p>
+                Lembrando que este evento é totalmente <span>gratuito</span> e acessível para qualquer <span>dev</span>.
+            </p>
+            <p>
+                Por favor, insira seus dados abaixo para que possamos entrar em contato.
+            </p>
+
+            <form action="#">
+                <div class="form_box">
+                    <label for="nome">Seu nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form_box">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Insira seu email" required>
+                </div>
+                <div class="form_box">
+                    <label for="motivo">Qual foi a maior motivação para participar deste evento?</label>
+                    <textarea name="motivo" id="motivo"  rows="10" spellcheck="false" maxlength="500"></textarea>
+                </div>
+                <div class="form_box">
+                    <label for="modulo">Módulo atual:</label>
+                    <select name="modulo" id="modulo">
+                        <option value="null">Nenhum (não sou aluno da Kenzie)</option>
+                        <option value="m1">M1</option>
+                        <option value="m2">M2</option>
+                        <option value="m3">M3</option>
+                        <option value="m4">M4</option>
+                        <option value="m5">M5</option>
+                        <option value="m6">M6</option>
+                        <option value="ex-aluno">Já fui aluno da Kenzie</option>
+                    </select>
+                </div>
+                <div class="form_box">
+                    <label for="senha">Senha:</label>
+                    <div class="password_reference">
+                        <input type="password" name="senha" id="senha" placeholder="Insira sua senha" minlength="6" maxlength="36" required>
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+
+                
+                <div class="news_box">
+                    <p>Precisamos saber também se gostaria de receber informações e novidades acerca da Kenzie Academy e seus respectivos futuros eventos. Toda comunicação será enviada pelo e-mail cadastrado, obedecendo todas as normas de segurança e privacidade.</p>
+                    <div>
+                        <input type="checkbox" name="accept_news" id="accept" value="true" required>
+                        <p>Sim, gostaria de receber novidades por e-mail.</p>
+                    </div>
+                </div>
+                
+                <button type="submit">finalizar registro</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
