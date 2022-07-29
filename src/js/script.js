@@ -1,10 +1,9 @@
 const inputElement = document.querySelector('input[type="password"]');
+const toggleTypePassword = (type) => inputElement.setAttribute('type', type);
 const iconElement = document.querySelector('#icon-view');
+const toggleTypeIcon = (name) => iconElement.setAttribute('name', name);
 
 const handleClick = () => {
-    const toggleTypePassword = (type) => inputElement.setAttribute('type', type);
-    const toggleTypeIcon = (name) => iconElement.setAttribute('name', name);
-
     const typePassword = inputElement.getAttribute('type');
     (typePassword === 'password')
         ? toggleTypePassword('text')
