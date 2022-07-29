@@ -1,21 +1,18 @@
-const inputPassword = document.querySelector('input[type="password"]');
-const currentTypePassword = inputPassword.getAttribute('type');
-const iconPassword = document.querySelector('ion-icon');
-const currentIconPassword = iconPassword.getAttribute('name');
+const inputElement = document.querySelector('input[type="password"]');
+const iconElement = document.querySelector('#icon-view');
 
 const handleClick = () => {
+    const toggleTypePassword = (type) => inputElement.setAttribute('type', type);
+    const toggleTypeIcon = (name) => iconElement.setAttribute('name', name);
 
-    const toggleTypePassword = (newType) => inputPassword.setAttribute('type', newType);
-    const isTypePasswordText = currentTypePassword === 'text';
-    (isTypePasswordText)
-        ? toggleTypePassword('password')
-        : toggleTypePassword('text');
+    const typePassword = inputElement.getAttribute('type');
+    (typePassword === 'password')
+        ? toggleTypePassword('text')
+        : toggleTypePassword('password');
 
-    const toggleIconPassword = (iconType) => iconPassword.setAttribute('name', iconType);
-    const isIconShow = currentIconPassword === 'eye-outline';
-    (isIconShow)
-        ? toggleIconPassword('eye-off-outline')
-        : toggleIconPassword('eye-outline');
+    const typeIcon = iconElement.getAttribute('name');
+    (typeIcon === 'eye-outline')
+        ? toggleTypeIcon('eye-off-outline')
+        : toggleTypeIcon('eye-outline');
 }
-
-iconPassword.addEventListener('click', handleClick);
+iconElement.addEventListener('click', handleClick);
